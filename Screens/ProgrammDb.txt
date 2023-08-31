@@ -1,0 +1,15 @@
+Следующим пунктом будет добавить следующие строчки в файл Program.cs
+
+Для этого в поисковике находим файл Program.cs и открываем его
+
+В открывшийся файл нужно вставить следующие строчки
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+Они нам нужны для подключения базы данных
+После добавления настроек, файл Program.cs должен выглядеть так:
+
+( screen ProgrammDb )

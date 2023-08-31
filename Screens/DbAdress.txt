@@ -1,0 +1,25 @@
+Указываем адрес нашей базы данных, для этого используем данную подсказку "View" -> "SQL Server Object Explorer" -> Noolest lahti vajutada SQL Server -> localDB peal parem klõps + rename -> copy"
+
+Со скопированными данными переходим в файл appsettings.json и вставляем следующие строчки:
+
+"ConnectionStrings": {
+    "DefaultConnection": "server=;database=Pood;"
+  }
+
+В поле server указываем скопированные ранее данные
+В поле database указываем название нашей бд, я выбрал Pood, т.к делаю магазин
+
+В конечной итоге файл appsettings.json должен выглядеть вот так:
+
+{
+    "ConnectionStrings": {
+      "DefaultConnection": "server=(localdb)\\MSSQLLocalDB;database=Pood;"
+    },
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "AllowedHosts": "*"
+  }
